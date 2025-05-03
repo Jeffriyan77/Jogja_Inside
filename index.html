@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" 
     rel="stylesheet" 
     integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" 
@@ -14,43 +13,81 @@
     href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
     crossorigin="anonymous"/>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
     <!-- NavBar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Home</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
-        </div>
-      </nav>
     <!-- NavBar -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.php">Jogja Inside</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse text-right" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item mx-3">
+              <a class="nav-link active" href="index.html">11</a>
+            </li>
+            <li class="nav-item dropdown mx-3">
+              <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                111
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li class="dropdown-submenu">
+                  <a class="dropdown-item dropdown-toggle" href="#"><i class="fas fa-map-pin"></i> Kota Yogyakarta</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#"><i class="fas fa-home"></i> 33</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown-submenu">
+                  <a class="dropdown-item dropdown-toggle" href="#"><i class="fas fa-map-pin"></i> Kabupaten Bantul</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#"><i class=""></i> Desa</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown-submenu">
+                  <a class="dropdown-item dropdown-toggle" href="#"><i class="fas fa-map-pin"></i> Kabupaten Sleman</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#"><i class=""></i> Desa</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown-submenu">
+                  <a class="dropdown-item dropdown-toggle" href="#"><i class="fas fa-map-pin"></i> Kabupaten Kulon Progo</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#"><i class=""></i> Desa</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown-submenu">
+                  <a class="dropdown-item dropdown-toggle" href="#"><i class="fas fa-map-pin"></i> Kabupaten Gunungkidul</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#"><i class="fas fa-home"></i> Desa</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link active" href="about.html">About</a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link active" href="#">Contact</a>
+            </li>
+            <!-- Search Navbar -->
+            <form class="d-flex align-items-center mx-2">
+              <div class="search-box position-relative">
+                <i class="bi bi-search search-icon"></i>
+                <input class="form-control custom-search" type="search" placeholder="Search" aria-label="Search">
+              </div>
+            </form>
+            <!-- Search Navbar -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+  <!-- NavBar -->
+  <!-- Banner -->
+  <div class="container-fluid banner"></div>
+  <!-- End Banner -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" 
     crossorigin="anonymous"></script>

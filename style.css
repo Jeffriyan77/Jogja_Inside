@@ -1,0 +1,282 @@
+/*------------------------------------------------------------- Navbar -----------------------------------------------------------------------*/
+.navbar-custom {
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding-top: 15px;
+    z-index: 3; /* ditambahkan agar tidak tertutup banner */
+  }
+  .navbar-custom .nav-link {
+    color: white;
+  }
+  .navbar-hidden {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Dropdown Menu */
+  .dropdown-menu {
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    padding: 10px 0;
+    border: none;
+  }
+  .dropdown-menu .dropdown-item,
+  .dropdown-item { /* dukung keduanya */
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    color: #000;
+  }
+  .dropdown-menu .dropdown-item i,
+  .dropdown-item i {
+    margin-right: 10px;
+    font-size: 18px;
+  }
+  
+  /* Dropdown submenu */
+  .dropdown-submenu {
+    position: relative;
+  }
+  .dropdown-submenu > .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -0.5rem;
+    display: none;
+    position: absolute;
+  
+  }
+  
+  /* Hover style item */
+.dropdown-menu .dropdown-item:hover,
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+  color: #000;
+}
+  
+  /* Search Box */
+  .search-box {
+    position: relative;
+    width: 200px;
+  }
+  .custom-search {
+    padding-left: 40px;
+    border-radius: 50px;
+    width: 100%;
+  }
+  .search-icon {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: rgb(255, 0, 0);
+  }
+
+
+/*------------------------------------------------------------- Banner -----------------------------------------------------------------------*/
+
+/* Banner */
+.banner {
+    flex: 1 0 auto;
+    background: url("img/BG_Home.jpg") no-repeat center center;
+    background-size: cover;
+    background-position: center top;
+    height: 100vh;
+    position: relative;
+    padding-top: 120px;
+  }
+  .banner::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Warna overlay background */
+    z-index: 0;
+  }
+
+
+
+
+/*--------------------------------------------------------------- About ----------------------------------------------------------------------*/
+
+
+
+.about-section h2 {
+    font-size: 50px;  /* Perbesar ukuran font untuk judul */
+    color: #ffffff;
+  }
+
+  .about-section {
+    flex: 1 0 auto;
+    background-image: url('img/BG_About.jpg'); 
+    background-size: cover;
+    background-position: center top;
+    height: 100vh;
+    position: relative;
+    padding-top: 120px;
+  }
+
+  .about-section::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Warna overlay background */
+    z-index: 0;
+  }
+
+  .about-section > .container {
+    position: relative;
+    z-index: 1;
+    margin-top: 30px; /* menurunkan isi */
+  }
+
+  .about-section .nav-link {
+    color: #ffffff;
+    pointer-events: none;  /* agar tdk ada hover */
+  }
+
+  .about-section p {
+    text-align: justify; /* Teks rata kanan kiri */
+  }
+
+  .about-image {
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 2px solid #ffffff;
+    margin-left: 30px;
+  }
+
+
+
+/*------------------------------------------------------------------ Team --------------------------------------------------------------------*/
+
+
+
+
+  .lingkaran {
+    display: inline-block;
+    border-radius: 50%;
+    width: 150px;
+    margin: auto;
+    height: 150px;
+    color: #fff;
+    background-color: #dc3545;
+  }
+
+  .lingkaran i {
+    position: relative;
+    top: 30px;
+  }
+  
+  .crop-img {
+    object-fit: cover;
+  }
+  
+  .tim img {
+    width: 150px;
+    border: 5px solid #cccccc;
+  }
+  
+  a.social {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    border-radius: 50%;
+    background-color: #333;
+    line-height: 40px;
+  }
+
+
+/*---------------------------------------------------------------- Mobile --------------------------------------------------------------------*/
+
+
+  /* Responsive */
+@media (max-width: 768px) {
+    .navbar-custom {
+     position: relative;
+     background-color: #222;
+    }
+    
+    .banner {
+     height: 100vh;
+     background-position: center top;
+     padding-top: 120px;
+    }
+    
+      .search-box {
+        width: 150px;
+      }
+    
+      /* Dropdown submenu mobile */
+      .dropdown-submenu > .dropdown-menu {
+        position: static;
+        margin-top: 0;
+        left: 0;
+        display: none;
+      }
+    
+    .dropdown-submenu .dropdown-menu.show {
+        display: block;
+    }
+
+    .dropdown-submenu:hover > .dropdown-menu {
+        display: block;
+      }
+
+    .about-section {
+      background-position: center top;
+      height: auto;
+      padding-top: 20px !important;
+      padding-bottom: 20px !important;
+    }
+
+    .about-section > .container {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .about-section .nav-link {
+      font-size: 18px;
+    }
+
+    .about-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;   /* Menengahkan gambar dan teks secara horizontal */
+      justify-content: center; /* Menengahkan konten secara vertikal */
+      text-align: center;
+    }
+
+    .about-image {
+      width: 100%;
+      max-width: 500px;  /* Pastikan gambar tidak terlalu besar di perangkat kecil */
+      height: auto;
+      object-fit: contain;  /* Menjaga gambar agar tidak terpotong */
+      margin: 0 auto 1rem auto; /* Menengahkan gambar secara horizontal */
+    }
+  
+    /* Mengatur ukuran teks About */
+    .about-section h2 {
+      font-size: 36px;  /* Perbesar ukuran font untuk judul */
+      margin-top: 5px !important;
+      margin-bottom: 10px !important;
+    }
+
+    .about-section h2.nav-link {
+      font-size: 30px;  /* Sesuaikan ukuran font */
+    }
+
+    /* Mengatur teks deskripsi */
+    .about-section p {
+      font-size: 16px;  /* Mengatur ukuran font deskripsi */
+      margin-top: 10px; /* Menambah jarak atas antara gambar dan teks */
+      line-height: 1.6;  /* Menambah jarak antar baris untuk kenyamanan membaca */
+      max-width: 800px;  /* Menambahkan lebar maksimal untuk teks agar tidak terlalu lebar di layar besar */
+      margin: 0 auto;  /* Menjaga teks tetap terpusat */
+    }
+  }
