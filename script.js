@@ -45,25 +45,19 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
   
+  let prevScrollPos = window.pageYOffset; // Menyimpan posisi scroll sebelumnya
+  let navbar = document.querySelector(".navbar-custom");
   
+  window.onscroll = function () {
+    let currentScrollPos = window.pageYOffset;
   
+    // Jika posisi scroll saat ini lebih besar dari sebelumnya (scroll ke bawah)
+    if (prevScrollPos < currentScrollPos) {
+      navbar.style.top = "-60px"; // Sembunyikan navbar (sesuaikan angka dengan tinggi navbar Anda)
+    } else {
+      navbar.style.top = "0"; // Tampilkan navbar kembali
+    }
+    
+    prevScrollPos = currentScrollPos; // Update posisi scroll sebelumnya
+  }
   
-  // Script untuk menyembunyikan navbar saat scroll ke bawah dan menampilkannya lagi saat scroll ke atas
-  $(document).ready(function() {
-    var lastScrollTop = 0; // Menyimpan posisi scroll sebelumnya
-  
-    // Event scroll
-    $(window).scroll(function() {
-      var currentScroll = $(this).scrollTop(); // Posisi scroll saat ini
-  
-      if (currentScroll > lastScrollTop) {
-        // Scroll ke bawah, sembunyikan navbar
-        $('.navbar-custom').addClass('navbar-hidden').removeClass('navbar-show');
-      } else {
-        // Scroll ke atas, tampilkan navbar
-        $('.navbar-custom').addClass('navbar-show').removeClass('navbar-hidden');
-      }
-  
-      lastScrollTop = currentScroll; // Update posisi scroll terakhir
-    });
-  });
