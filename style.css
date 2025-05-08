@@ -100,23 +100,27 @@
 
 /*------------------------------------------------------------- Top Hidden Gems --------------------------------------------------------------*/
 
-.services-section {
+.services-selection {
   text-align: center;
   padding: 60px 20px;
   font-family: 'Times New Roman', Times, serif;
 }
 
-.section-title {
+.selection-title {
   font-size: 36px;
   margin-bottom: 10px;
+  text-align: center;
+  justify-content: center;
 }
 
-.section-subtitle {
+.selection-subtitle {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 14px;
   color: #888;
   margin-bottom: 40px;
+  text-align: center;
+  justify-content: center;
 }
 
 
