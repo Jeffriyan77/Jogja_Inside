@@ -98,6 +98,75 @@
 
 
 
+/*------------------------------------------------------------- Top Hidden Gems --------------------------------------------------------------*/
+
+.services-section {
+  text-align: center;
+  padding: 60px 20px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.section-title {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 40px;
+}
+
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translate(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card h3 {
+  font-size: 20px;
+  margin: 15px 0 10px;
+}
+
+.card p {
+  font-size: 14px;
+  padding: 0 15px 20px;
+  color: #666;
+}
+
+.btn {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #000;
+  text-transform: uppercase;
+  font-size: 12px;
+  border-bottom: 1px solid #000;
+  text-decoration: none;
+  padding: 5px;
+}
 
 /*--------------------------------------------------------------- About ----------------------------------------------------------------------*/
 
