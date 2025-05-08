@@ -103,12 +103,18 @@
 .services-selection {
   text-align: center;
   padding: 60px 20px;
+  justify-content: center;
   font-family: 'Times New Roman', Times, serif;
+
 }
 
 .selection-title {
   font-size: 36px;
   margin-bottom: 10px;
+  text-align: center;
+  justify-content: center;
+  padding-top: 50px;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .selection-subtitle {
@@ -117,6 +123,8 @@
   font-size: 14px;
   color: #888;
   margin-bottom: 40px;
+  text-align: center;
+  justify-content: center;
 }
 
 
