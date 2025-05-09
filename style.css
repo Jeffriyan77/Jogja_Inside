@@ -261,6 +261,8 @@
 
   .about-section p {
     text-align: justify; /* Teks rata kanan kiri */
+    line-height: 1.8;
+    margin-bottom: 20px; /* jarak antar paragraf */
   }
 
   .about-image {
@@ -321,6 +323,7 @@
 /*------------------------------------------------------------------ Footer --------------------------------------------------------------------*/
 
   .footer {
+    margin-top: 5%;
     background-color: #1e1e1e;
     color: #f1f1f1;
     padding: 30px 0;
