@@ -45,19 +45,69 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
   
-  let prevScrollPos = window.pageYOffset; // Menyimpan posisi scroll sebelumnya
+  document.addEventListener('DOMContentLoaded', function () {
+    // Submenu logic for mobile
+    if (window.innerWidth <= 768) {
+      var dropdownSubmenus = document.querySelectorAll('.dropdown-submenu > a');
+  
+      dropdownSubmenus.forEach(function (element) {
+        element.addEventListener('click', function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+  
+          var submenu = this.nextElementSibling;
+  
+          // Tutup semua submenu lain
+          document.querySelectorAll('.dropdown-submenu .dropdown-menu.show').forEach(function (openSubmenu) {
+            if (openSubmenu !== submenu) {
+              openSubmenu.classList.remove('show');
+            }
+          });
+  
+          if (submenu) {
+            submenu.classList.toggle('show');
+          }
+        });
+      });
+  
+      // Klik di luar menu
+      document.addEventListener('click', function (e) {
+        if (!e.target.closest('.dropdown-submenu')) {
+          document.querySelectorAll('.dropdown-submenu .dropdown-menu.show').forEach(function (submenu) {
+            submenu.classList.remove('show');
+          });
+        }
+      });
+    }
+  
+    // Resize reset
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 768) {
+        document.querySelectorAll('.dropdown-submenu .dropdown-menu').forEach(function (submenu) {
+          submenu.classList.remove('show');
+        });
+      }
+    });
+  });
+  
+  // Scroll behavior (sembunyi & background gelap)
+  let prevScrollPos = window.pageYOffset;
   let navbar = document.querySelector(".navbar-custom");
   
   window.onscroll = function () {
     let currentScrollPos = window.pageYOffset;
   
-    // Jika posisi scroll saat ini lebih besar dari sebelumnya (scroll ke bawah)
     if (prevScrollPos < currentScrollPos) {
-      navbar.style.top = "-60px"; // Sembunyikan navbar (sesuaikan angka dengan tinggi navbar Anda)
+      navbar.style.top = "-60px";
     } else {
-      navbar.style.top = "0"; // Tampilkan navbar kembali
+      navbar.style.top = "0";
     }
-    
-    prevScrollPos = currentScrollPos; // Update posisi scroll sebelumnya
-  }
   
+    if (currentScrollPos > 50) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  
+    prevScrollPos = currentScrollPos;
+  };
